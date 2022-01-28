@@ -57,34 +57,6 @@
 			<div class="container">
 			<!-- SLIDE TOP -->
 			
-				<div class="row">
-
-					<div class="col-md-4">
-						<h6><i class="icon-heart"></i> WHY SMARTY?</h6>
-						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas metus nulla, commodo a sodales sed, dignissim pretium nunc. Nam et lacus neque. Ut enim massa, sodales tempor convallis et, iaculis ac massa. </p>
-					</div>
-
-					<div class="col-md-4">
-						<h6><i class="fa-facheck"></i> RECENTLY VISITED</h6>
-						<ul class="list-unstyled">
-							<li><a href="#"><i class="fa fa-angle-right"></i> Consectetur adipiscing elit amet</a></li>
-							<li><a href="#"><i class="fa fa-angle-right"></i> This is a very long text, very very very very very very very very very very very very </a></li>
-							<li><a href="#"><i class="fa fa-angle-right"></i> Lorem ipsum dolor sit amet</a></li>
-							<li><a href="#"><i class="fa fa-angle-right"></i> Dolor sit amet,consectetur adipiscing elit amet</a></li>
-							<li><a href="#"><i class="fa fa-angle-right"></i> Consectetur adipiscing elit amet,consectetur adipiscing elit</a></li>
-						</ul>
-					</div>
-
-					<div class="col-md-4">
-						<h6><i class="icon-envelope"></i> CONTACT INFO</h6>
-						<ul class="list-unstyled">
-							<li><b>Address:</b> PO Box 21132, Here Weare St, <br /> Melbourne, Vivas 2355 Australia</li>
-							<li><b>Phone:</b> 1-800-565-2390</li>
-							<li><b>Email:</b> <a href="info@codeboxx.biz">info@codeboxx.biz</a></li>
-						</ul>
-					</div>
-
-				</div>
 
 			</div>
 
@@ -139,7 +111,7 @@
 
 						<!-- Logo -->
 						<a class="logo float-left scrollTo" href="index.html">
-							<img width="300" height="200" src= "R2.png" alt = "not here" />
+							<img width="300" height="200" src= "pictures/R2.png" alt = "not here" />
 						</a>
 
 						<!-- 
@@ -202,33 +174,114 @@
 
 			</div>
 
+			<body id="body">
+			<h2>Do a quote!</h2>
 
 
 
+			<div class="row">
+				<div class="col-md-4">
+					
+				<div class="col-md-4">
+					<label for="contact_department">Building Type</label>
+					<select class="form-control pointer" name="contact[department]">
+						<option value="">--- Select ---</option>
+						<option value="Corporate">Corporate</option>
+						<option value="Hybrid">Hybrid</option>
+						<option value="Commercial">Commercial</option>
+						<option value="Residential">Residential</option>
+					</select>
+				</div>
 
 
+				<div class="row">
+					<div class="col-md-4">
+						
+					<div class="col-md-4">
+						<label for="contact_department">Elevator Type</label>
+						<select class="form-control pointer" name="contact[department]">
+							<option value="">--- Select ---</option>
+							<option value="Standard">Standard</option>
+							<option value="Premium">Premium</option>
+							<option value="Excelium">Excelium</option>
+							
+						</select>
+					</div>
+			</body>
+			<script>
+				let choiceEType = "";
+				let choiceBType = "";
 
 
+			</script>
 
 
+            
+			<!-- FOOTER -->
+			<footer id="footer">
+				<div class="container">
 
 
+					<div class="row">
+
+						<!-- col #1 -->
+						<div class="col-md-4">
+
+							<h2 class="letter-spacing-1">WHY US?</h2>
+
+							<!-- Small Description -->
+							<p>
+								Because we are here for you and we are ready to make any of your dreams come true.
+								We are committed on giving you the best possible experience!
+							</p>
+							
+						</div>
+						<!-- /col #1 -->
+						<div class="row">
+
+							<!-- col #1 -->
 
 
+							<!-- col #2 -->
+							<div class="col-md-4">
+	
+								<h2 class="letter-spacing-1">FIND US !</h2>
+	
+								<!-- Small Description -->
+								<p>4468 Wellington St Suite 204, Verdun, Quebec H4G 1W5</p>
+								<p>(418) 555-1234</p>
+								<p>info@codeboxx.biz</p>
+							</div>
+						<!-- col #2 -->
+
+						<!-- col #3 -->
+						<div class="col-md-8">
+							<h2 class="letter-spacing-1">KEEP IN TOUCH</h2>
+
+							<!-- Newsletter Form -->
+							<p>Enter your email so we can contact you!</p>
+
+							<form class="validate" action="php/newsletter.php" method="post" data-success="Thank you!" data-toastr-position="bottom-right">
+								<div class="input-group">
+									<span class="input-group-addon"><i class="fa fa-envelope"></i></span>
+									<input type="email" id="email" name="email" class="form-control required" placeholder="Enter your Email">
+									<span class="input-group-btn">
+										<button class="btn btn-success" type="submit">Send</button>
+									</span>
+								</div>
+							</form>
+							<!-- /Newsletter Form -->
 
 
+						</div>
+						<!-- /col #3 -->
+
+					</div>
 
 
+				</div>
 
-
-
-
-
-
-
-
-
-
+				
 
             
 			<!-- FOOTER -->
@@ -311,8 +364,8 @@
 
 		</div>
 		<!-- /wrapper -->
-
-
+	</div>
+</div>
 		<!-- SCROLL TO TOP -->
 		<a href="#" id="toTop"></a>
 
@@ -373,3 +426,25 @@
 		</script>
 	</body>
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
