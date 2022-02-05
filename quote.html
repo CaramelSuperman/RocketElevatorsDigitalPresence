@@ -27,29 +27,11 @@
 		<!-- PAGE LEVEL SCRIPTS -->
 		<link href="assets/css/header-1.css" rel="stylesheet" type="text/css" />
 		<link href="assets/css/color_scheme/yellow.css" rel="stylesheet" type="text/css" id="color_scheme" />
+
+
 	</head>
 
-	<!--
-		AVAILABLE BODY CLASSES:
-		
-		smoothscroll 			= create a browser smooth scroll
-		enable-animation		= enable WOW animations
-
-		bg-grey					= grey background
-		grain-grey				= grey grain background
-		grain-blue				= blue grain background
-		grain-green				= green grain background
-		grain-blue				= blue grain background
-		grain-orange			= orange grain background
-		grain-yellow			= yellow grain background
-		
-		boxed 					= boxed layout
-		pattern1 ... patern11	= pattern background
-		menu-vertical-hide		= hidden, open on click
-		
-		BACKGROUND IMAGE [together with .boxed class]
-		data-background="assets/images/_smarty/boxed_background/1.jpg"
-	-->
+	
 	<body class="smoothscroll enable-animation">
 
 		<div id="slidetop">
@@ -75,26 +57,7 @@
 			<!-- 
 				AVAILABLE HEADER CLASSES
 
-				Default nav height: 96px
-				.header-md 		= 70px nav height
-				.header-sm 		= 60px nav height
-
-				.b-0 		= remove bottom border (only with transparent use)
-				.transparent	= transparent header
-				.translucent	= translucent header
-				.sticky			= sticky header
-				.static			= static header
-				.dark			= dark header
-				.bottom			= header on bottom
 				
-				shadow-before-1 = shadow 1 header top
-				shadow-after-1 	= shadow 1 header bottom
-				shadow-before-2 = shadow 2 header top
-				shadow-after-2 	= shadow 2 header bottom
-				shadow-before-3 = shadow 3 header top
-				shadow-after-3 	= shadow 3 header bottom
-
-				.clearfix		= required for mobile menu, do not remove!
 
 				Example Usage:  class="clearfix sticky header-sm transparent b-0"
 			-->
@@ -176,112 +139,118 @@
 
 			<body id="body">
 			<h2>Do a quote!</h2>
+			
+<!-- submission form -->
+<div class="form-left">
+	<h3 class="building">Building Type</h3>
+	<select type="text" id="building-type" class="form-control" style="max-width: 200px;">
+		<option value="">Select</option>
+		<option value="residential">Residential</option>
+		<option value="commercial">Commercial</option>
+		<option value="corporate">Corporate</option>
+		<option value="hybrid">Hybrid</option>
+	</select>
+	<br><br>
+	<form id="quote-form">
+		<div id= "numberApart"class="residential hidden">
+			<label for="number-of-apartments">Number of apartments in the building</label>
+			<input type="number" placeholder="select" id="number-of-apartments"
+			oninput="" min="0" class="form-control quote-form-input" style= "max-width: 200px;">
+		</div>
+		<br>
+		<div id="numberFloors"class="floors hidden">
+			<label class="" for="number-of-floors">Number of floors contained in the building</label>
+			<input type="number" placeholder="select" id="number-of-floors" oninput="" min="0" class="form-control quote-form-input" style="max-width: 200px;">
+		</div>
+		<br>
+		<div id="numberBasements"class="basements hidden">
+			<label class="" for="number-of-basements">Number of basements contained in the building</label>
+			<input type="number" placeholder="select" id="number-of-basements"
+			oninput="" min="0" class="form-control" style= "max-width: 200px;">
+		</div>
+		<br>
+		<div id="numberCompanies"class="district hidden">
+			<label class="" for="number-of-companies">Number of distinct businesses</label>
+			<input type="number" placeholder="select" id="number-of-companies"
+			oninput="" min="0" class="form-control" style="max-width: 200px;">
+		</div>
+		<br>
+		<div id="numberParking"class="parking hidden">
+			<label class="" for="number-of-parking-spots">Number of parking space available</label>
+			<input type="number" placeholder="select" id="number-of-parking-spots"
+			oninput="" min="0" class="form-control" style="max-width: 200px;">
+		</div>
+		<br>
+		<div id="numberElevators"class="commercial hidden">
+			<label class ="" for="number-of-elevators">Number of elevator cages to be deployed</label>
+			<input type="number" placeholder="select" id="number-of-elevators"
+			oninput="" min="0" class="form-control" style="max-width: 200px;" >
+		</div>
+		<br>
+		<div id="numberCorporation"class="corporate hidden">
+			<label class="" for="number-of-corporations">Number of separate tenant companies</label>
+			<input type=“number” placeholder="select" id="number-of-corporations"
+			oninput="" min= "0" class="form-control" style="max-width: 200px;">
+		</div>
+		<br>
+		<div id="maximunOccup"class="corporate2 hidden">
+			<label class="" for="maximum-occupancy">Maximum number of occupants per floor</label>
+			<input type= "number" placeholder="select" id="maximum-occupancy"
+			oninput="" min="0" class="form-control" style= "max-width: 200px;">
+		</div>
+		<br>
+		<div id="businessHours"class="hybrid hidden">
+			<label class=“” for="business-hours">number of hours of activity of the building</label>
+			<input type=“number” placeholder="select" id="business-hours"
+			oninput="" min="0" class="form-control" style="max-width: 200px;">
+		</div>
+	</form>
+</div>
+<div id="product-type" class="form-right">
+	<h3 class="product">Chose a product line</h3>
+	<label class="radio">
+	<input type="radio" id="standardLine" name="radio-btn" value="standard" checked>
+	<i></i> Standard
+	</label>
+	<label class="radio">
+	<input type="radio" id="premiumLine" name="radio-btn" value="premium">
+	<i></i> Premium
+	</label>
+	<label class="radio">
+	<input type="radio" id="exceliumLine" name="radio-btn" value="excelium">
+	<i></i> Excelium
+	</label>
+	<br><br><br>
+   <form id="readonly">
+		<div id="elevator-amound">
+			<label>Number of elevator</label>
+			<input readonly type="text" id="number-of-elevator" class="form-control" style="max-width: 200px;">
+		</div>
+		<br>
+		<div id="unit-price">
+			<label>The unit price of each elevator</label>
+			<input readonly type="text" id="elevator-unit-price" class="form-control" style="max-width: 200px;">
+		</div>
+		<br>
+		<div id="price-elevators">
+			<label>The total price of the elevators</label>
+			<input readonly type="text" id="total-price-elevators" class="form-control" style="max-width: 200px;">
+		</div>
+		<br>
+		<div id="instalation-fees">
+			<label>The installation fees</label>
+			<input readonly type="text" id="installation-fees" class="form-control" style="max-width: 200px;">
+		</div>
+		<br>
+		<div id="total-price">
+			<label>The final price</label>
+			<input readonly type="text" id="final-price" class="form-control" style="max-width: 200px;">
+		</div>
+   </form>
+</div>
 
+			
 
-
-			<div class="row">
-				<div class="col-md-4">
-					
-				<div class="col-md-4">
-					<label for="contact_department">Building Type</label>
-					<select class="form-control pointer" name="contact[department]">
-						<option value="">--- Select ---</option>
-						<option value="Corporate">Corporate</option>
-						<option value="Hybrid">Hybrid</option>
-						<option value="Commercial">Commercial</option>
-						<option value="Residential">Residential</option>
-					</select>
-				</div>
-
-
-				<div class="row">
-					<div class="col-md-4">
-						
-					<div class="col-md-4">
-						<label for="contact_department">Elevator Type</label>
-						<select class="form-control pointer" name="contact[department]">
-							<option value="">--- Select ---</option>
-							<option value="Standard">Standard</option>
-							<option value="Premium">Premium</option>
-							<option value="Excelium">Excelium</option>
-							
-						</select>
-					</div>
-			</body>
-			<script>
-				let choiceEType = "";
-				let choiceBType = "";
-
-
-			</script>
-
-
-            
-			<!-- FOOTER -->
-			<footer id="footer">
-				<div class="container">
-
-
-					<div class="row">
-
-						<!-- col #1 -->
-						<div class="col-md-4">
-
-							<h2 class="letter-spacing-1">WHY US?</h2>
-
-							<!-- Small Description -->
-							<p>
-								Because we are here for you and we are ready to make any of your dreams come true.
-								We are committed on giving you the best possible experience!
-							</p>
-							
-						</div>
-						<!-- /col #1 -->
-						<div class="row">
-
-							<!-- col #1 -->
-
-
-							<!-- col #2 -->
-							<div class="col-md-4">
-	
-								<h2 class="letter-spacing-1">FIND US !</h2>
-	
-								<!-- Small Description -->
-								<p>4468 Wellington St Suite 204, Verdun, Quebec H4G 1W5</p>
-								<p>(418) 555-1234</p>
-								<p>info@codeboxx.biz</p>
-							</div>
-						<!-- col #2 -->
-
-						<!-- col #3 -->
-						<div class="col-md-8">
-							<h2 class="letter-spacing-1">KEEP IN TOUCH</h2>
-
-							<!-- Newsletter Form -->
-							<p>Enter your email so we can contact you!</p>
-
-							<form class="validate" action="php/newsletter.php" method="post" data-success="Thank you!" data-toastr-position="bottom-right">
-								<div class="input-group">
-									<span class="input-group-addon"><i class="fa fa-envelope"></i></span>
-									<input type="email" id="email" name="email" class="form-control required" placeholder="Enter your Email">
-									<span class="input-group-btn">
-										<button class="btn btn-success" type="submit">Send</button>
-									</span>
-								</div>
-							</form>
-							<!-- /Newsletter Form -->
-
-
-						</div>
-						<!-- /col #3 -->
-
-					</div>
-
-
-				</div>
-
-				
 
             
 			<!-- FOOTER -->
@@ -359,6 +328,9 @@
 					</div>
 				</div>
 
+
+
+                
 			</footer>
 			<!-- /FOOTER -->
 
@@ -384,8 +356,7 @@
 
 		<script src="assets/js/scripts.js"></script>
 		
-		<!-- STYLESWITCHER - REMOVE -->
-		<script async src="demo_files/styleswitcher/styleswitcher.js"></script>
+		
 
 		<!-- REVOLUTION SLIDER -->
 		<script src="assets/plugins/slider.revolution/js/jquery.themepunch.tools.min.js"></script>
@@ -394,6 +365,8 @@
 
 		<!-- PAGELEVEL SCRIPTS -->
 		<script src="assets/js/contact.js"></script>
+
+		<script src="assets/js/quote.js"></script>
 
 		<!-- 
 			GMAP.JS 
@@ -424,6 +397,7 @@
 			});
 
 		</script>
+
 	</body>
 </html>
 
